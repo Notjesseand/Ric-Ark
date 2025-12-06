@@ -58,9 +58,9 @@ const Nav = ({ hideAuthButtons = false }: NavProps) => {
         showNavbar ? "block" : "hidden"
       }`}
     >
-      <div className="text-white flex font-montserrat justify-between px-4 sm:px-8 pt-1 sm:pt-2 items-center backdrop-blur-sm">
+      <div className="text-white flex font-montserrat justify-between px-6 sm:px-8 pt-1 sm:pt-2 items-center backdrop-blur-sm">
         <Link href="/">
-          <img src="/logo.png" alt="" className="h-12 sm:h-20 z-50 relative" />
+          <img src="/logo.png" alt="" className="h-14 sm:h-20 z-50 relative" />
         </Link>
         <div>
           {/* <div className="md:flex gap-x-6 py-5 items-center hidden text-sm">
