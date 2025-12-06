@@ -175,7 +175,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <Link href="/">
                 <ArrowUpCircleIcon className="h-5 w-5" />
                 <span className=" font-semibold font-montserrat">
-                  Yieldfountain
+                  Ric Ark Admin
                 </span>
               </Link>
             </SidebarMenuButton>

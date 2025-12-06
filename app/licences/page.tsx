@@ -442,7 +442,7 @@ export default function LicensesPage() {
           <p className="text-white text-sm leading-relaxed font-montserrat">
             In order to ensure the provision of their portfolio of services in
             full compliance with all applicable global and local regulations and
-            standards, Yieldfoutain companies hold licenses and registrations in
+            standards, Ric Ark companies hold licenses and registrations in
             numerous jurisdictions worldwide, and are constantly bringing their
             operations in line with newly adopted legislative changes.
           </p>

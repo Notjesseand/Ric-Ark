@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="space-y-4">
           <img
             src="/logo.png"
-            alt="YieldFountain Logo"
+            alt="Ric Ark Logo"
             className="h-12 sm:h-14 md:h-16 w-auto"
           />
           <p className="text-sm sm:text-base text-slate-300">

@@ -201,7 +201,7 @@ export default function HomePage() {
                     img: "/ai.png",
                     name: "AI Technology",
                     writeup:
-                      "Yieldfountain is an AI-based digital asset investment platform, supported by top global investors. Our tech ensures a hassle-free experience accessible to everyone.",
+                      "Ric Ark Investment is an AI-based digital asset investment platform, supported by top global investors. Our tech ensures a hassle-free experience accessible to everyone.",
                   },
                   {
                     img: "/shield.png",
