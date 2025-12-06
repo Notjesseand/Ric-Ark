@@ -172,7 +172,7 @@ export default function HomePage() {
               id="about"
             >
               <p className="text-[#36bb91] text-lg font-semibold uppercase tracking-wide">
-                About YieldFountain
+                About Ric Ark Investment
               </p>
               <h2 className="text-4xl sm:text-5xl font-semibold leading-snug mt-4 sm:w-2/3 mx-auto">
                 Maximized returns with low investment risk.
