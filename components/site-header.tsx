@@ -10,8 +10,10 @@ import { Bell, Info } from "lucide-react";
 import Link from "next/link";
 import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "@/lib/firebase";
+import { useTheme } from "next-themes";
 
 export function SiteHeader() {
+  const { resolvedTheme } = useTheme();
   const { currentUser } = useAuth();
   const [hasNewMessage, setHasNewMessage] = useState(false);
 
@@ -37,9 +39,13 @@ export function SiteHeader() {
         <div className="w-full flex justify-between items-center sm:pr-1">
           <div className="flex justify-between w-full pr-4">
             <img
-              src="/logo-text.png"
-              alt=""
-              className="max-w-24 object-contain hidden sm:flex -ml-2  "
+              src={
+                resolvedTheme === "dark"
+                  ? "/logo-text-light.png"
+                  : "/logo-text.png"
+              }
+              alt="Logo"
+              className="max-w-24 object-contain hidden sm:flex -ml-2"
             />
             <h1 className="text-base flex">
               <Deposit />

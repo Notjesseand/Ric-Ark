@@ -205,37 +205,29 @@ export function ChartAreaInteractive() {
                 type: "area",
                 height: 350,
                 toolbar: { show: false },
+
+                zoom: { enabled: false },
+                // @ts-ignore
+                pan: { enabled: false },
+                // @ts-ignore
+                events: { mouseWheelZoom: false },
+
                 fontFamily: "Montserrat, sans-serif",
               },
-              dataLabels: {
-                enabled: false, // ⛔ FIX cluttered labels
-              },
-              stroke: {
-                curve: "smooth", // ⛔ FIX jagged line
-                width: 2,
-              },
+              dataLabels: { enabled: false },
+              stroke: { curve: "smooth", width: 2 },
               fill: {
-                type: "gradient", // ⛔ Add smooth area shading
+                type: "gradient",
                 gradient: {
                   shadeIntensity: 1,
                   opacityFrom: 0.4,
                   opacityTo: 0.1,
                 },
               },
-              xaxis: {
-                type: "datetime",
-                labels: { show: true },
-              },
-              yaxis: {
-                tooltip: { enabled: true },
-                labels: { show: true },
-              },
-              grid: {
-                borderColor: "rgba(128,128,128,0.3)", // cleaner grid
-              },
-              theme: {
-                mode: resolvedTheme === "dark" ? "dark" : "light",
-              },
+              xaxis: { type: "datetime", labels: { show: true } },
+              yaxis: { tooltip: { enabled: true }, labels: { show: true } },
+              grid: { borderColor: "rgba(128,128,128,0.3)" },
+              theme: { mode: resolvedTheme === "dark" ? "dark" : "light" },
             }}
             height={350}
           />
