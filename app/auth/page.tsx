@@ -302,8 +302,10 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-const SITE_KEY = "6Le_ECQsAAAAANok8kNxfYy-j5BpWxQRltsIX9On";  // <-- YOUR SITE KEY
-const SECRET_KEY = "6Le_ECQsAAAAALOr2o3nO7tQfhnNf77Q8nOP1Eoiu"; // <-- YOUR SECRET KEY
+// 🔑 CORRECTED: Using the correct Site Key from your console.
+const SITE_KEY = "6Ld1DSQsAAAAALLBu1PnlhKcJEyxkIsj3ns8rHYc";
+// ❌ REMOVED: The Secret Key is now handled securely on the server (in the API route via environment variable).
+// const SECRET_KEY = "...";
 
 const signUpSchema = z
   .object({
@@ -366,24 +368,28 @@ export default function SignUpPage() {
     // GET reCAPTCHA token from widget
     const token = (window as any).grecaptcha.getResponse();
 
+    // Reset the widget to allow a new attempt if the user fails verification
+    (window as any).grecaptcha.reset();
+
     if (!token) {
       form.setError("email", { message: "Please verify you are not a robot" });
       setLoading(false);
       return;
     }
 
-    // VERIFY TOKEN WITH GOOGLE API
-    const verifyRes = await axios.post(
-      `https://www.google.com/recaptcha/api/siteverify?secret=${SECRET_KEY}&response=${token}`
-    );
-
-    if (!verifyRes.data.success) {
-      form.setError("email", { message: "Captcha verification failed" });
-      setLoading(false);
-      return;
-    }
-
+    // ✅ SECURE VERIFICATION: Call the local API route instead of Google's public endpoint
     try {
+      const verifyRes = await axios.post("/api/verify-captcha", { token });
+
+      if (!verifyRes.data.success) {
+        form.setError("email", {
+          message: "Captcha verification failed. Please try again.",
+        });
+        setLoading(false);
+        return;
+      }
+
+      // Proceed with Firebase signup only after successful Captcha verification
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         data.email,
@@ -428,6 +434,7 @@ export default function SignUpPage() {
 
       router.push("/dashboard");
     } catch (error: any) {
+      // Catch errors from Firebase signup OR the API call
       form.setError("email", { message: error.message || "Signup failed" });
       setLoading(false);
     }
@@ -483,7 +490,11 @@ export default function SignUpPage() {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input type="email" placeholder="you@example.com" {...field} />
+                    <Input
+                      type="email"
+                      placeholder="you@example.com"
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -539,19 +550,26 @@ export default function SignUpPage() {
                 <FormItem>
                   <FormLabel>Referral Code (optional)</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter referral code (if any)" {...field} />
+                    <Input
+                      placeholder="Enter referral code (if any)"
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
 
-            {/* ✔️ INSERTED: reCAPTCHA checkbox */}
+            {/* ✔️ RECAPTCHA: Uses the correct, updated SITE_KEY constant */}
             <div className="flex justify-center pt-3">
               <div className="g-recaptcha" data-sitekey={SITE_KEY}></div>
             </div>
 
-            <Button type="submit" className="w-full mt-2 py-2" disabled={loading}>
+            <Button
+              type="submit"
+              className="w-full mt-2 py-2"
+              disabled={loading}
+            >
               {loading ? <Spinner /> : "Create Account"}
             </Button>
 
