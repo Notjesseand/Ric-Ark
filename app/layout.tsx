@@ -30,6 +30,12 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Montserrat:wght@200&family=Poppins&display=swap"
           rel="stylesheet"
         />
+        <script
+          src="https://www.google.com/recaptcha/api.js"
+          async
+          defer
+        ></script>
+
         <link
           href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Poppins&display=swap"
           rel="stylesheet"
