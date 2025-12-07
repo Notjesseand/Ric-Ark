@@ -453,7 +453,7 @@ export function SectionCards() {
       )}
 
       {/* Wallet Balance Card */}
-      <Card className="@container/card font-montserrat transform transition-transform hover:scale-105 bg-gradient-to-t from-blue-500/10 to-blue-100/10 dark:from-blue-700/10 dark:to-card border-2 border-blue-300 dark:border-blue-600 shadow-md hover:shadow-lg animate-in fade-in duration-500">
+      <Card className="@container/card font-montserrat transform transition-transform hover:scale-105  border-2 border-[#c9a678] shadow-md hover:shadow-lg animate-in fade-in duration-500">
         <CardHeader className="relative">
           <div className="sm:flex space-y-4 sm:space-y-0 sm:space-x-6">
             <div className="flex items-center space-x-2">
@@ -535,7 +535,7 @@ export function SectionCards() {
       </Card>
 
       {/* Markets Card */}
-      <Card className="@container/card font-montserrat transform transition-transform hover:scale-105 bg-gradient-to-t from-green-500/10 to-green-100/10 dark:from-green-700/10 dark:to-card border-2 border-green-300 dark:border-green-600 shadow-md hover:shadow-lg animate-in fade-in duration-500">
+      <Card className="@container/card font-montserrat transform transition-transform hover:scale-105  dark:to-card border-[#c9a678] border-2 shadow-md hover:shadow-lg animate-in fade-in duration-500">
         <CardHeader className="relative">
           <div className="flex items-center space-x-2">
             <LineChart className="size-5 text-blue-500 dark:text-blue-300" />
