@@ -340,7 +340,7 @@ export default function HomePage() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-snug">
               Millions of users around the world
             </h2>
-            <p className="text-base sm:text-xl text-slate-400 font-medium">
+            <p className="text-base sm:text-sm text-slate-400 font-medium">
               It&apos;s an exciting time to become an investor.
             </p>
           </div>
