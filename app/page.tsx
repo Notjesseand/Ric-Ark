@@ -448,7 +448,7 @@ export default function HomePage() {
 
             <Link
               href=""
-              className="mt-4 sm:mt-0 bg-gradient-to-r from-[#36bb91] to-[#369cbb] text-white text-lg sm:text-xl font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 whitespace-nowrap"
+              className="mt-4 sm:mt-0 bg-gradient-to-r from-[#36bb91] to-[#369cbb] text-white text-base font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105 whitespace-nowrap"
             >
               Sign up
             </Link>
