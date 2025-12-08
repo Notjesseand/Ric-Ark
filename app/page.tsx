@@ -129,23 +129,8 @@ export default function HomePage() {
             <hr className="border-slate-700" />
 
             {/* Numbers grid */}
-            {/* <div className="grid grid-cols-2 md:grid-cols-4 text-center py-12 gap-8">
-              {[
-                { label: "ACTIVE USERS", value: "12k+" },
-                { label: "ALREADY INVESTED", value: "$115M" },
-                { label: "RATING", value: "4.8" },
-                { label: "ASSETS MANAGED", value: "90M+" },
-              ].map((item, i) => (
-                <div key={i}>
-                  <p className="text-4xl font-bold">{item.value}</p>
-                  <p className="text-sm font-medium text-slate-300 mt-1">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
-            </div> */}
 
-            <div className="grid grid-cols-2 md:grid-cols-4 text-center py-12 gap-8">
+            {/* <div className="grid grid-cols-2 md:grid-cols-4 text-center py-12 gap-8">
               {stats.map((item, i) => (
                 <div key={i}>
                   <p className="text-4xl font-bold">
@@ -158,6 +143,32 @@ export default function HomePage() {
                       prefix={item.prefix}
                       suffix={item.suffix}
                     />
+                  </p>
+                  <p className="text-sm font-medium text-slate-300 mt-1">
+                    {item.label}
+                  </p>
+                </div>
+              ))}
+            </div> */}
+
+            <div className="grid grid-cols-2 md:grid-cols-4 text-center py-12 gap-8">
+              {stats.map((item, i) => (
+                <div key={i}>
+                  <p className="text-4xl font-bold flex items-center justify-center">
+                    <CountUp
+                      start={0}
+                      end={item.value}
+                      duration={2}
+                      enableScrollSpy
+                      scrollSpyOnce
+                      prefix={item.prefix}
+                      suffix={item.suffix}
+                    />
+
+                    {/* 🌟 NEW: Conditional Star Icon for "RATING" */}
+                    {item.label === "RATING" && (
+                      <span className="text-amber-400 ml-2">★</span>
+                    )}
                   </p>
                   <p className="text-sm font-medium text-slate-300 mt-1">
                     {item.label}
