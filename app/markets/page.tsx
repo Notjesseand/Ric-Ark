@@ -31,7 +31,7 @@ export default function MarketsPage() {
       <AppSidebar variant="inset" />
       <SidebarInset>
         <SiteHeader />
-        <div className="px-4 py-24 md:py-32 font-montserrat">
+        <div className="px-4 py-10 md:py-16 font-montserrat">
           <h2 className="text-2xl font-bold mb-6">Top 100 Cryptocurrencies</h2>
           {loading ? (
             <div className="flex justify-center items-center py-20">
