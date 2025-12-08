@@ -81,7 +81,7 @@ export default function HomePage() {
               href="/auth"
               className="inline-block mt-12 px-12 py-4 rounded-lg bg-gradient-to-r from-[#36bb91] to-[#369cbb] font-montserrat text-xl font-semibold text-white uppercase shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
             >
-              Open Account
+              Sign Up
             </Link>
           </div>
 
