@@ -391,7 +391,7 @@ export default function HomePage() {
               </div>
 
               {/* Review Text */}
-              <p className="text-lg text-slate-300 mt-6 flex-grow leading-relaxed">
+              <p className="text-sm text-slate-300 mt-6 flex-grow leading-relaxed">
                 {item.review}
               </p>
 
