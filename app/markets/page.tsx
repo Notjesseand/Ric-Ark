@@ -63,13 +63,13 @@ export default function MarketsPage() {
                     >
                       <td className="px-4 py-2 flex items-center gap-2">
                         <img
-                          src={coin.image}
-                          alt={coin.name}
+                          src={coin?.image}
+                          alt={coin?.name}
                           className="h-5 w-5"
                         />
                         {coin.name}{" "}
                         <span className="text-slate-500 uppercase ml-1">
-                          {coin.symbol}
+                          {coin?.symbol}
                         </span>
                       </td>
                       <td className="px-4 py-2">
@@ -85,16 +85,16 @@ export default function MarketsPage() {
                         {coin.price_change_percentage_24h?.toFixed(2)}%
                       </td>
                       <td className="px-4 py-2 hidden md:table-cell">
-                        ${coin.high_24h.toLocaleString()}
+                        ${coin.high_24h?.toLocaleString()}
                       </td>
                       <td className="px-4 py-2 hidden md:table-cell">
-                        ${coin.low_24h.toLocaleString()}
+                        ${coin.low_24h?.toLocaleString()}
                       </td>
                       <td className="px-4 py-2 hidden md:table-cell">
-                        ${coin.total_volume.toLocaleString()}
+                        ${coin.total_volume?.toLocaleString()}
                       </td>
                       <td className="px-4 py-2">
-                        ${coin.market_cap.toLocaleString()}
+                        ${coin.market_cap?.toLocaleString()}
                       </td>
                     </tr>
                   ))}
