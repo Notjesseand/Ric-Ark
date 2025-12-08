@@ -250,7 +250,7 @@ export default function HomePage() {
           <h2 className="text-3xl sm:text-4xl text-center text-white font-semibold mt-6">
             How our AI-tailored investment works
           </h2>
-          <p className="text-base sm:text-lg text-center text-white mt-4 sm:w-2/3 mx-auto leading-relaxed">
+          <p className="text-base text-center text-white mt-4 sm:w-2/3 mx-auto leading-relaxed">
             We&apos;ve simplified the process to help you kick off your
             investment journey with Ric Ark Investment.
           </p>
@@ -340,7 +340,7 @@ export default function HomePage() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-snug">
               Millions of users around the world
             </h2>
-            <p className="text-base sm:text-sm text-slate-400 font-medium">
+            <p className="text-base text-slate-400 font-medium">
               It&apos;s an exciting time to become an investor.
             </p>
           </div>
@@ -425,7 +425,7 @@ export default function HomePage() {
             <h2 className="text-4xl sm:text-5xl text-white font-semibold">
               Still have questions?
             </h2>
-            <p className="text-lg sm:text-xl text-slate-400">
+            <p className="text-base sm:text-lg text-slate-400">
               See frequently asked questions by other users
             </p>
           </div>
