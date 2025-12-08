@@ -58,7 +58,7 @@ const Nav = ({ hideAuthButtons = false }: NavProps) => {
         showNavbar ? "block" : "hidden"
       }`}
     >
-      <div className="text-white flex font-montserrat justify-between px-5 pr-5 sm:px-10 pt-3 sm:pt-4 items-center backdrop-blur-sm">
+      <div className="text-white flex font-montserrat justify-between px-5 pr-5 sm:px-10 pt-3 sm:pt-2 items-center backdrop-blur-sm">
         <Link href="/">
           <img src="/logo.png" alt="" className="h-16 sm:h-20 z-50 relative" />
         </Link>
