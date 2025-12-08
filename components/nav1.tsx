@@ -53,7 +53,7 @@ const Nav1 = ({ hideAuthButtons = false }: NavProps) => {
   return (
     <div className="text-white flex font-montserrat justify-between px-5 pr-5 sm:px-10 pt-3 sm:pt-4 items-center">
       <Link href="/">
-        <img src="/logo.png" alt="" className="h-14 sm:h-20 z-50 relative" />
+        <img src="/logo.png" alt="" className="h-16 sm:h-20 z-50 relative" />
       </Link>
 
       <div>

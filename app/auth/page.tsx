@@ -303,7 +303,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
 // 🔑 CORRECTED: Using the correct Site Key from your console.
-const SITE_KEY = "6Ld1DSQsAAAAALLBu1PnlhKcJEyxkIsj3ns8rHYc";
+const SITE_KEY = "6LfqSSQsAAAAABJB1PLyt_VfGCq3Qb91wsdDe6_w";
 // ❌ REMOVED: The Secret Key is now handled securely on the server (in the API route via environment variable).
 // const SECRET_KEY = "...";
 
@@ -561,7 +561,7 @@ export default function SignUpPage() {
             />
 
             {/* ✔️ RECAPTCHA: Uses the correct, updated SITE_KEY constant */}
-            <div className="flex justify-center pt-3">
+            <div className="flex justify-center pt-5">
               <div className="g-recaptcha" data-sitekey={SITE_KEY}></div>
             </div>
 

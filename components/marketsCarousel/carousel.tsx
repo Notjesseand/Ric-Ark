@@ -578,7 +578,7 @@ export function MarketCarousel() {
                         24hrs:
                       </span>{" "}
                       {item.price_change_percentage_24h > 0 ? "+" : ""}
-                      {item.price_change_percentage_24h.toFixed(2)}%
+                      {item.price_change_percentage_24h?.toFixed(2)}%
                     </p>
                   </div>
                 </CarouselItem>
@@ -667,7 +667,7 @@ export function MarketCarousel() {
                   </div>
                   <div className="text-center text-sm">
                     <p className="font-semibold">
-                      ${item.current_price.toLocaleString()}
+                      ${item?.current_price?.toLocaleString()}
                     </p>
                     <p
                       className={`mt-2 truncate max-w-[100%] ${
@@ -679,8 +679,8 @@ export function MarketCarousel() {
                       <span className="text-[11px] text-black font-semibold">
                         24hrs:
                       </span>{" "}
-                      {item.price_change_percentage_24h > 0 ? "+" : ""}
-                      {item.price_change_percentage_24h.toFixed(2)}%
+                      {item?.price_change_percentage_24h > 0 ? "+" : ""}
+                      {item?.price_change_percentage_24h?.toFixed(2)}%
                     </p>
                   </div>
                 </CarouselItem>
