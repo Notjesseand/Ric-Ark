@@ -52,12 +52,12 @@ const accordion = () => {
             className="border-slate-700"
           >
             <AccordionTrigger className="text-white">
-              <p className="text-white text-base sm:text-lg ">
+              <p className="text-white text-base ">
                 {item.question}
               </p>
             </AccordionTrigger>
             <AccordionContent>
-              <p className="text-slate-400 text-sm sm:text-base">
+              <p className="text-slate-400 text-base">
                 {item.answer}
               </p>
             </AccordionContent>
@@ -73,12 +73,12 @@ const accordion = () => {
             className="border-slate-700"
           >
             <AccordionTrigger className="text-white">
-              <p className="text-white text-base sm:text-lg ">
+              <p className="text-white text-base ">
                 {item.question}
               </p>
             </AccordionTrigger>
             <AccordionContent>
-              <p className="text-slate-400 text-base sm:text-lg ">
+              <p className="text-slate-400 text-base ">
                 {item.answer}
               </p>
             </AccordionContent>
